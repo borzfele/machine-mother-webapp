@@ -1,0 +1,49 @@
+-recipes
+    -id                     -id of the recipe
+    -name                   -name of the recipe
+    -country_id             -kitchen from where it comes
+    -instructions           -cooking steps
+    -rating                 -rating
+    -mealtime               -type of the mealtime (breakfast, dinner, lunch, etc)
+    -type                   -type of the meal (soup, main stuff, dessert, etc)
+    -time                   -estimated completion time with preparations
+
+-materials
+    -id                     -id of the material
+    -name                   -name of the material
+    -unit_id                -unit
+    -price_per_unit         -price per unit
+    -origin_id              -id of the seller business/company
+    -manufacturer_id        -id of the manufacturer
+    -expiration             -average expiration time of the material
+
+-stock
+    -id                     -id of the article
+    -material_id            -id of the material
+    -quantity               -quantity of the material
+    -acquisition_date       -date of purchase
+
+-origins
+    -id                     -id of the seller business/company
+    -name                   -name of the seller
+    -country_id             -id of the country of the seller
+
+-manufacturers
+    -id                     -id of the manufacturer
+    -name                   -name of the manufacturer
+    -country_id             -id of the country of the manufacturer
+
+-units
+    -id                     -id of the unit
+    -name                   -name of the unit
+
+-countries
+    -id                     -id of the country
+    -name                   -name of the country
+
+-recipe_materials
+    -id                     -id of the article
+    -recipe_id              -id of the recipe the material will used for
+    -material_id            -id of the material we going to use
+    -unit_id                -id of the unit
+    -quantity               -quantity of the unit
