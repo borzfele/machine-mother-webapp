@@ -1,6 +1,5 @@
 import connection_string
 import psycopg2
-import os
 
 
 def connection_decorator(func):
