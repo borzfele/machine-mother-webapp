@@ -6,9 +6,6 @@ app = Flask('codecool_series')
 
 @app.route('/')
 def index():
-    result = data_manager.execute_select('''
-                                            SELECT name FROM recipes;
-                                        ''')
     return render_template('index.html', recipes=result)
 
 
