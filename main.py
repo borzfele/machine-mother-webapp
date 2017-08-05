@@ -1,12 +1,13 @@
 from flask import Flask, render_template, url_for
 from data import data_manager
+import sql_queries
 
-app = Flask('codecool_series')
+app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/add_recipe')
 def index():
-    return render_template('index.html', recipes=result)
+    return render_template('add_recipe.html')
 
 
 def main():

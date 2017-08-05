@@ -1,3 +1,68 @@
+---------------------------------------------------------------------------------------
+USER STORIES
+---------------------------------------------------------------------------------------
+The program should recommend recipes based on the stock and/or on weekly/monthly sala-
+ry.
+
+++++++++++++++++
++RECIPE CREATOR+
+++++++++++++++++
+
+The user can add new recipes, materials, origins, manufacturers, etc.
+When a user adds a new recipe, the program should check if there are similar recipes,
+and if there are, it should recommend it instead.
+
+If the recipe couldn't found in the database, it must be saved.
+If a material or any other parameter couldn't found in the database, it should be
+saved as a new record in the related database.
+
+The user should add:
+    -name               The user types in the name of the food. The program should
+                        check if it can be found in the database. If not, it will in-
+                        sert it in the database.
+
+    -country            The user types in the country where the food originated from.
+                        The program should check if it can be found in the database.
+                        If not, it will be inserted.
+
+    -instructions       The user adds instructions as steps to the recipe. It will be
+                        moderated by the admin or an editor. Then it will be saved.
+
+    -mealtime           The user should add when he/she used to eat this food.
+
+    -type               The user should add what type of food is it. (appetizer, soup,
+                        main dish, dessert, etc.)
+
+    -time_estimation    The user should add a proximation about the time under he/she
+                        made it before.
+
+    -material bill
+        -amount         Numeric data.
+
+        -unit           In SI-units. No damn tablespoons, cups, and other bullshit.
+
+        -material       Name of the material. If new, the user must add further infor-
+                        mations.
+
+
++++++++++++++++
++MATERIAL FORM+
++++++++++++++++
+
+Pops up, if the freshly added recipe contains any material, which can't be found in
+the database.
+
+The user should add:
+        -name
+        -unit
+        -average price per unit
+        -provider
+        
+
+---------------------------------------------------------------------------------------
+DATABASE
+---------------------------------------------------------------------------------------
+
 -recipes
     -id                     -id of the recipe
     -name                   -name of the recipe
